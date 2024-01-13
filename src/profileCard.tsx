@@ -1,16 +1,16 @@
 import React from 'react';
 import './styles.css';
-import icon from './assets/icon.png';
 import { FaGithub, FaTwitter, FaDiscord, FaYoutube, FaCoffee, FaLastfmSquare } from 'react-icons/fa';
 import DiscordStatus from './discordStatus';
+import AudioPlayer from './audioPlayer';
 
 const ProfileCard: React.FC = () => {
   return (
-    <div className='profile-card'>
+    <div>
+        <div className='profile-card'>
       {/* profile image */}
       <div className='profile-picture'>
         <DiscordStatus userId="173026540907528192" />
-        <img className='profile-picture' src={icon} alt='Profile picture' />
       </div>
       {/* Profile information */}
       <div className='profile-info'>
@@ -38,6 +38,11 @@ const ProfileCard: React.FC = () => {
       <div className='now-playing'>
         <a href='https://www.last.fm/user/OugiFormula' target='_blank'><FaLastfmSquare size={30} />&nbsp;Last.FM</a>
         <img src='https://imagelfm.art/image/v2/C1B99286' alt='lastfm'></img>
+      </div>
+    </div>
+    <div className="bottom-buttons">
+        <AudioPlayer />
+        <a href='https://ko-fi.com/yukiokoito/shop' target='_blank' rel="noopener noreferrer"><button id='funkybottons'>🖋️ Commissions</button></a>
       </div>
     </div>
   );

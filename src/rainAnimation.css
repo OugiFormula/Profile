@@ -18,6 +18,15 @@
     opacity: 0.5;
   }
   
+  /* Adjustments for smaller screens */
+  @media (max-width: 600px) {
+    .raindrop {
+      width: 1px;
+      height: 5px;
+      animation-duration: 2s;
+    }
+  }
+  
   @keyframes fall {
     to {
       transform: translateY(100vh);

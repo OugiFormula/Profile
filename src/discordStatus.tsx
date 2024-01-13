@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import icon from './assets/icon.png';
 
 interface LanyardData {
   data?: {
@@ -31,7 +32,9 @@ const DiscordStatus: React.FC<{ userId: string }> = ({ userId }) => {
   }, [userId]);
 
   return (
-    <div className='discord-status-circle' style={{backgroundColor: getStatusColor(status)}}/>);};
+    <div className='profile-picture'>
+        <img className='profile-picture' style={{ border: `5px solid ${getStatusColor(status)}` }} src={icon} alt='Profile picture' />
+      </div>);};
 
 const getStatusColor = (status: string): string => {
   switch (status) {

@@ -10,14 +10,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: auto;
+    overflow: hidden;
   }
   
   .profile-card {
     position: relative;
-    max-width: 425px;
+    max-width: 90%;
+    max-height: 90%;
     width: 100%;
-    height: 90%;
     margin: 0 auto;
     padding: 20px;
     border: 2px solid #ffffff;
@@ -25,7 +25,7 @@ body {
     background-color: #301650;
     text-align: center;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
-    overflow: auto;
+    overflow: hidden;
     opacity: 0;
     animation: fadeIn 1s ease-out forwards;
   }
@@ -69,7 +69,7 @@ body {
   #muteButton {
     position: relative;
     bottom: 10px;
-    right: -320px;
+    right: -510px;
     top: 10px;
     background-color: #301650;
     opacity: 0.7;
@@ -131,8 +131,8 @@ body {
   }
   
   .now-playing img {
-    height: 200px;
-    width: 425px;
+    height: 275px;
+    width: 500px;
   }
   
   .now-playing a {
@@ -188,9 +188,9 @@ body {
 
 
 .discord-status-circle {
-    position: absolute;
+    position: relative;
     bottom: 15px;
-    right: 110px;
+    right: 200px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -198,3 +198,30 @@ body {
     border: 2px solid #ffffff;
     z-index: 10;
   }
+
+
+  @media (max-width: 600px) {
+    #muteButton {
+        position: relative;
+        bottom: 10px;
+        right: -370px;
+        top: 10px;
+        background-color: #301650;
+        opacity: 0.7;
+        border: 2px solid #ffffff;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+      }
+    
+      #funkybottons {
+        position: relative;
+        bottom: 10px;
+        right: -25px;
+        top: -33px;
+        background-color: #301650;
+        opacity: 0.7;
+        border: 2px solid #ffffff;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+      }
+
+  }
+  
