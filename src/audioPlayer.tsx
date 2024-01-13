@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import music from './assets/audio/funky.mp3';
-import './styles.css'; // Make sure to import your styles
+import './styles.css';
 
 const AudioPlayer: React.FC = () => {
   const [isMuted, setIsMuted] = useState(false);
   const [opacity, setOpacity] = useState(1);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [pointerEvents, setPointerEvents] = useState<'auto' | 'none'>('auto');
 
   const toggleMute = () => {
     setIsMuted((prevMuted) => !prevMuted);
@@ -19,6 +20,11 @@ const AudioPlayer: React.FC = () => {
         console.error('Autoplay was prevented:', error);
       });
     }
+
+    // Disable pointer events after the animation
+    setTimeout(() => {
+      setPointerEvents('none');
+    }, 500); // Adjust the duration based on your typing animation duration
   };
 
   useEffect(() => {
@@ -31,7 +37,7 @@ const AudioPlayer: React.FC = () => {
   return (
     <div>
       <div
-        style={{ opacity }}
+        style={{ opacity, pointerEvents }}
         className="reveal-button"
         onClick={handleOverlayClick}
       >
