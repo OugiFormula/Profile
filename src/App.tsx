@@ -2,7 +2,7 @@ import React from 'react';
 import ProfileCard from './profileCard';
 import RainAnimation from './rainAnimation';
 import './styles.css';
-import background from './assets/test.gif';
+import background from './assets/yukiobackground.gif';
 import AudioPlayer from './audioPlayer';
 
 const App: React.FC = () => {
