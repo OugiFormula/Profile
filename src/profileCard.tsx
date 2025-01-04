@@ -18,7 +18,7 @@ const ProfileCard: React.FC = () => {
         <p>He/Him</p>
         <br/>
         {/* TODO make sure to put the profession on bold text */}
-        <p><strong>Graphic Designer - Programming - Game Developer</strong></p>
+        <p><strong>Graphic Designer - Programmer - Game Developer</strong></p>
         <p><strong>21 - Israel - Male</strong></p>
       </div>
 
