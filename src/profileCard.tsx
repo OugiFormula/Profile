@@ -19,7 +19,7 @@ const ProfileCard: React.FC = () => {
         <br/>
         {/* TODO make sure to put the profession on bold text */}
         <p><strong>Graphic Designer - Programming</strong></p>
-        <p><strong>20 - Israel - Male</strong></p>
+        <p><strong>21 - Israel - Male</strong></p>
       </div>
 
       <div className="social-buttons">
